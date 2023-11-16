@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+
+  api:
+    build: "https://github.com/ZPI-2023-IST/API.git"
+    ports:
+      - "5002:5002"
+
+  frontend:
+    build: "https://github.com/ZPI-2023-IST/Frontend.git#dev"
+    ports:
+      - "3000:3000"
+
+  rl:
+    build: "https://github.com/ZPI-2023-IST/RL.git#integration"
+    ports:
+      - "5001:5000"
