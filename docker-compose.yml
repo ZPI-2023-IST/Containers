@@ -3,7 +3,7 @@ version: '3'
 services:
 
   api:
-    build: "https://github.com/ZPI-2023-IST/API.git"
+    build: "https://github.com/ZPI-2023-IST/API.git#port_change"
     ports:
       - "5002:5002"
 
@@ -13,9 +13,9 @@ services:
       - "3000:3000"
 
   rl:
-    build: "https://github.com/ZPI-2023-IST/RL.git#integration"
+    build: "https://github.com/ZPI-2023-IST/RL.git#integration_different_port"
     ports:
-      - "5001:5000"
+      - "5000:5000"
 
   freecell-gui:
     build: "https://github.com/ZPI-2023-IST/FreeCell-GUI.git"
