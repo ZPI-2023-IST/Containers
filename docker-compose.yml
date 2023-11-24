@@ -3,21 +3,35 @@ version: '3'
 services:
 
   api:
-    build: "https://github.com/ZPI-2023-IST/API.git#port_change"
+    build: "https://github.com/ZPI-2023-IST/API.git"
     ports:
       - "5002:5002"
+    networks:
+      - app-network
 
   frontend:
     build: "https://github.com/ZPI-2023-IST/Frontend.git"
     ports:
       - "3000:3000"
+    networks:
+      - app-network
 
   rl:
-    build: "https://github.com/ZPI-2023-IST/RL.git#integration_different_port"
+    build: "https://github.com/ZPI-2023-IST/RL.git"
     ports:
       - "5000:5000"
+    networks:
+      - app-network
+    depends_on:
+      - api
 
   freecell-gui:
-    build: "https://github.com/ZPI-2023-IST/FreeCell-GUI.git"
+    build: "https://github.com/ZPI-2023-IST/FreeCell-GUI.git#Z2-88"
     ports:
       - "5005:5005"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: "bridge"
