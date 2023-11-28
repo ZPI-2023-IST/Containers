@@ -3,7 +3,7 @@ version: '3'
 services:
 
   api:
-    build: "https://github.com/ZPI-2023-IST/API.git#visualize-fix"
+    build: "https://github.com/ZPI-2023-IST/API.git"
     ports:
       - "5002:5002"
     networks:
