@@ -26,7 +26,7 @@ services:
       - api
 
   freecell-gui:
-    build: "https://github.com/ZPI-2023-IST/FreeCell-GUI.git#Z2-88"
+    build: "https://github.com/ZPI-2023-IST/FreeCell-GUI.git"
     ports:
       - "5005:5005"
     networks:
