@@ -17,7 +17,7 @@ services:
       - app-network
 
   rl:
-    build: "https://github.com/ZPI-2023-IST/RL.git#quick_fix"
+    build: "https://github.com/ZPI-2023-IST/RL.git"
     ports:
       - "5000:5000"
     networks:
